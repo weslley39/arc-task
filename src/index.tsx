@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Content from './App';
 import reportWebVitals from './reportWebVitals';
+import 'typeface-poppins'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Content />
   </React.StrictMode>,
   document.getElementById('root')
 );
