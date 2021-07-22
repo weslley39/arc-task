@@ -10,8 +10,8 @@ const HomePage = () => {
   return (
     <Container>
       {
-        state.users.map((user) => (
-          <Card isChecked={user.checked}>
+        state.users?.map((user) => (
+          <Card isChecked={user.checked} key={user.id}>
             <Avatar src={user.imageUrl} alt="Avatar" />
             <Name>{user.name}</Name>
             <Checkbox

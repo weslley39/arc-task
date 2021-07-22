@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import { User } from '../../../../typings';
 
 const ACTION_TYPES = {
-  SET_USER_CHECKED: 'SET_USER_CHECKED',
+  TOGGLE_CHECKBOX: 'TOGGLE_CHECKBOX',
 };
 
 interface State {
@@ -16,8 +16,8 @@ interface Action {
 
 function reducer(state: State, action: Action) {
   switch (action.type) {
-  case ACTION_TYPES.SET_USER_CHECKED: {
-    const users = state.users.map((user) => {
+  case ACTION_TYPES.TOGGLE_CHECKBOX: {
+    const users = state.users?.map((user) => {
       if (user.id === action.userId) {
         user.checked = !Boolean(user.checked);
       }
@@ -41,9 +41,8 @@ function useController({ users }: { users: User[] }) {
   });
 
   function setChecked(userId: number) {
-    dispatch({ type: ACTION_TYPES.SET_USER_CHECKED, userId });
+    dispatch({ type: ACTION_TYPES.TOGGLE_CHECKBOX, userId });
   }
-
 
   return {
     setChecked,
