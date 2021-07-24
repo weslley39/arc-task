@@ -10,6 +10,9 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+export const Content = styled.div`
+  width: 265px;
+`;
 interface CardProps {
   isChecked: boolean;
 }
@@ -39,4 +42,16 @@ export const Name = styled.p`
   text-align: left;
   padding-left: 20px;
   font-size: 12px;
+`;
+
+export const Title = styled.h1`
+  margin: 0 0 10px 8px;
+  font-size: 18px;
+  font-weight: 700;
+`;
+
+export const Subtitle = styled.p`
+  margin: 0 0 5px 8px;
+  font-size: 12px;
+  font-weight: 200;
 `;

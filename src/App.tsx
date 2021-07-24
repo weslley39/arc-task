@@ -4,7 +4,6 @@ import Router from './pages';
 import ThemeProvider from './components/ThemeProvider/ThemeProvider';
 
 const Content = styled.div`
-  text-align: center;
   height: 100vh;
 `;
 
