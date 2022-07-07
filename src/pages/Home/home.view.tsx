@@ -1,5 +1,14 @@
 import Checkbox from '@material-ui/core/Checkbox';
-import { Container, Card, Avatar, Name } from './home.styles'
+import {
+  Container,
+  Content,
+  Card,
+  Avatar,
+  Name,
+  Title,
+  Subtitle,
+  Header,
+} from './home.styles'
 import useController from './hooks/useController/useController';
 import users from './index.data';
 
@@ -9,6 +18,11 @@ const HomePage = () => {
 
   return (
     <Container>
+      <Header>
+        <Title>Private View Members</Title>
+        <Subtitle>Select members who will see entire project</Subtitle>
+      </Header>
+      <Content>
       {
         state.users?.map((user) => (
           <Card isChecked={user.checked} key={user.id}>
@@ -22,6 +36,7 @@ const HomePage = () => {
           </Card>
         ))
       }
+      </Content>
     </Container>
   )
 };
